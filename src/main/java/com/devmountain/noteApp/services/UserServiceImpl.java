@@ -3,12 +3,12 @@ package com.devmountain.noteApp.services;
 import com.devmountain.noteApp.dtos.UserDto;
 import com.devmountain.noteApp.entities.User;
 import com.devmountain.noteApp.repositories.UserRepository;
+import jakarta.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Repository;
 import org.springframework.stereotype.Service;
 
-import javax.transaction.Transactional;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;

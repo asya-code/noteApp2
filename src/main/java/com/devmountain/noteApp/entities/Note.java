@@ -1,5 +1,5 @@
 package com.devmountain.noteApp.entities;
-import javax.persistence.*;
+import jakarta.persistence.*;
 
 import com.devmountain.noteApp.dtos.NoteDto;
 import com.fasterxml.jackson.annotation.JsonBackReference;

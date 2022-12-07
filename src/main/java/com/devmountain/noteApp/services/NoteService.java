@@ -1,8 +1,8 @@
 package com.devmountain.noteApp.services;
 
 import com.devmountain.noteApp.dtos.NoteDto;
+import jakarta.transaction.Transactional;
 
-import javax.transaction.Transactional;
 import java.util.List;
 import java.util.Optional;
 
