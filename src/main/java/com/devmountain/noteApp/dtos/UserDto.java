@@ -19,7 +19,13 @@ public class UserDto implements Serializable {
     private Set<NoteDto> noteDtoSet= new HashSet<>();
 
     public UserDto(User user) {
-        if (user.getId())
+        if (user.getId() != null) {
+            this.username = user.getUsername();
+        }
+
+        if (user.getPassword() != null) {
+            this.password = user.getPassword();
+        }
     }
 
 }
