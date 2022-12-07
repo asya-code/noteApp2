@@ -1,6 +1,7 @@
 package com.devmountain.noteApp.entities;
 import javax.persistence.*;
 
+import com.devmountain.noteApp.dtos.NoteDto;
 import com.fasterxml.jackson.annotation.JsonBackReference;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -40,6 +41,12 @@ public class Note {
 
     public void setBody(String body) {
         this.body = body;
+    }
+
+    public Note (NoteDto noteDto) {
+        if (noteDto.getBody() != null) {
+            this.body = noteDto.getBody();
+        }
     }
 
 }

@@ -1,6 +1,7 @@
 package com.devmountain.noteApp.entities;
 import javax.persistence.*;
 
+import com.devmountain.noteApp.dtos.UserDto;
 import com.fasterxml.jackson.annotation.JsonBackReference;
 import com.fasterxml.jackson.annotation.JsonManagedReference;
 import lombok.AllArgsConstructor;
@@ -54,6 +55,16 @@ public class User {
 
     public void setPassword(String password) {
         this.password = password;
+    }
+
+    public User (UserDto userDto) {
+        if (userDto.getUsername() != null) {
+            this.username = userDto.getUsername();
+        }
+
+        if (userDto.getPassword() != null) {
+            this.password = userDto.getPassword();
+        }
     }
 
 }
